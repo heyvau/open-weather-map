@@ -1,0 +1,23 @@
+[
+    {
+        "city": "Berlin",
+        "temperature_C": 16.25,
+        "humidity": 90,
+        "description_de": "Klarer Himmel",
+        "description_en": "clear sky"
+    },
+    {
+        "city": "Stuttgart",
+        "temperature_C": 16.23,
+        "humidity": 85,
+        "description_de": "Klarer Himmel",
+        "description_en": "clear sky"
+    },
+    {
+        "city": "Aachen",
+        "temperature_C": 15.87,
+        "humidity": 87,
+        "description_de": "Bedeckt",
+        "description_en": "overcast clouds"
+    }
+]
