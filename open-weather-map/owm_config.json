@@ -1,0 +1,11 @@
+{
+    "url": "https://api.openweathermap.org/data/2.5/weather",
+    "api_key": "e04f43cd2992177301ffa35418c48c3f",
+    "cities": ["Berlin", "Stuttgart", "Aachen", "Halle"],
+    "languages": ["de", "en"],
+    "units": "metric",
+    "export_files": {
+        "json": "myweather.json",
+        "yaml": "myweather.yaml"
+    }
+}
