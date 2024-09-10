@@ -1,0 +1,20 @@
+- city: Berlin
+  description_de: Klarer Himmel
+  description_en: clear sky
+  humidity: 71
+  temperature_C: 16.42
+- city: Stuttgart
+  description_de: Klarer Himmel
+  description_en: clear sky
+  humidity: 77
+  temperature_C: 14.46
+- city: Aachen
+  description_de: Bedeckt
+  description_en: overcast clouds
+  humidity: 81
+  temperature_C: 14.53
+- city: Halle (Saale)
+  description_de: Klarer Himmel
+  description_en: clear sky
+  humidity: 58
+  temperature_C: 16.1
