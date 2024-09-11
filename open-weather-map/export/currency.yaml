@@ -1,8 +1,0 @@
-- base: EUR
-  currency: 1.1
-  currency_code: USD
-  vs_currency: 0.91
-- base: EUR
-  currency: 45.45
-  currency_code: UAH
-  vs_currency: 0.02
