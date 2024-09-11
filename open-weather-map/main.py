@@ -1,4 +1,4 @@
-from apps import OwmApp
+from owm_app import OwmApp
 import os
 from pathlib import Path
 

@@ -1,0 +1,20 @@
+- city: Berlin
+  description_de: Ein paar Wolken
+  description_en: few clouds
+  humidity: 70
+  temperature_C: 15.24
+- city: Stuttgart
+  description_de: Leichter Regen
+  description_en: light rain
+  humidity: 81
+  temperature_C: 15.24
+- city: Aachen
+  description_de: "\xDCberwiegend bew\xF6lkt"
+  description_en: broken clouds
+  humidity: 71
+  temperature_C: 13.16
+- city: Halle (Saale)
+  description_de: Ein paar Wolken
+  description_en: few clouds
+  humidity: 58
+  temperature_C: 15.4

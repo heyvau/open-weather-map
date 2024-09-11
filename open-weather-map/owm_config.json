@@ -5,7 +5,7 @@
     "languages": ["de", "en"],
     "units": "metric",
     "export_files": {
-        "json": "myweather.json",
-        "yaml": "myweather.yaml"
+        "json": "./export/myweather.json",
+        "yaml": "./export/myweather.yaml"
     }
 }
