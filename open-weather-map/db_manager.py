@@ -1,22 +1,14 @@
-import sqlite3
+import sqlalchemy as db
+from sqlalchemy.sql import text
+from logger import log
+
 
 class DBManager:
-    def __init__(self, db_name, db_connector) -> None:
-        self.db_name = db_name
-        self.db_connector = db_connector
-        # self.conn = sqlite3.connect('./owm.db')
-        # self.cursor = self.conn.cursor()
+    def __init__(self, engine: str) -> None:
+        self.engine = db.create_engine(engine)
 
-    # def create_table
-    # with conn:
-    #     cursor.execute(
-    #         "DROP TABLE IF EXISTS CityWeather;")
-
-    #     cursor.execute(
-    #         "CREATE TABLE CityWeather( \
-    #             city TEXT, \
-    #             temperature_C REAL, \
-    #             humidity INTEGER, \
-    #             description_de TEXT, \
-    #             description_en TEXT);"
-    #         )
+    @log
+    def execute(self, stmt: str, data=None) -> None:
+        with self.engine.connect() as conn:
+            conn.execute(text(stmt), data or ())
+            conn.commit()

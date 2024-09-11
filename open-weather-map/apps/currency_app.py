@@ -19,8 +19,10 @@ class CurrencyApp(App, AppABC):
         )
         currency = current_data["rates"][cur_code]
         return {
-                f"EUR_{cur_code}": round(currency, 2),
-                f"{cur_code}_EUR": round(1 / currency, 2)
+            "base": "EUR",
+            "currency_code": cur_code,
+            "currency": round(currency, 2),
+            "vs_currency": round(1 / currency, 2)
             }
 
     @log

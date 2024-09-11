@@ -7,5 +7,13 @@
     "export_files": {
         "json": "./export/myweather.json",
         "yaml": "./export/myweather.yaml"
+    },
+    "db": {
+        "engine": "sqlite:///./export/owm.db",
+        "stmt": {
+            "drop_table": "DROP TABLE IF EXISTS CityWeather;",
+            "create_table": "CREATE TABLE CityWeather (id INTEGER PRIMARY KEY AUTOINCREMENT, city VARCHAR(50), temperature_C DECIMAL(10,2), humidity INTEGER, description_de VARCHAR(200), description_en VARCHAR(200));",
+            "insert": "INSERT INTO CityWeather (city, temperature_C, humidity, description_de, description_en) VALUES (:city, :temperature_C, :humidity, :description_de, :description_en)"
+        } 
     }
 }

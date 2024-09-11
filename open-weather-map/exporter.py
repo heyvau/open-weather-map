@@ -46,21 +46,3 @@ def export_to_yaml(data: list[dict], filename: str) -> None:
     """
     with open(filename, mode="w", encoding="UTF-8") as f:
         yaml.dump(data, f, default_flow_style=False)
-
-# @log
-# def export_to_sql(data: list[dict], table_name: str, db_name: str) -> None:
-#     """
-#     Function inserts data rows into the db table.
-#     """
-#     conn = sqlite3.connect(db_name)
-#     cursor = conn.cursor()
-
-#     fields = tuple(data[0].keys())
-#     values = [tuple(i.values()) for i in data]
-    
-#     sql_statement = f'INSERT INTO {table_name} \
-#         {fields} \
-#         VALUES({", ".join(["?"] * len(fields))});'
-
-#     with conn:
-#         cursor.executemany(sql_statement, values)
