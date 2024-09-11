@@ -1,0 +1,9 @@
+{
+    "url": "http://api.exchangeratesapi.io/v1/latest",
+    "api_key": "79e79735837c7eb811dec6a6159a26cb",
+    "currency": {"EUR": ["USD", "UAH"]},
+    "export_files": {
+        "json": "./export/currency.json",
+        "yaml": "./export/currency.yaml"
+    }
+}

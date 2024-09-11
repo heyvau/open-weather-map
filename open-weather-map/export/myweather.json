@@ -1,30 +1,30 @@
 [
     {
         "city": "Berlin",
-        "temperature_C": 15.24,
-        "humidity": 70,
-        "description_de": "Ein paar Wolken",
-        "description_en": "few clouds"
+        "temperature_C": 12.44,
+        "humidity": 76,
+        "description_de": "Klarer Himmel",
+        "description_en": "clear sky"
     },
     {
         "city": "Stuttgart",
-        "temperature_C": 15.24,
-        "humidity": 81,
+        "temperature_C": 10.06,
+        "humidity": 90,
         "description_de": "Leichter Regen",
         "description_en": "light rain"
     },
     {
         "city": "Aachen",
-        "temperature_C": 13.16,
-        "humidity": 71,
-        "description_de": "\u00dcberwiegend bew\u00f6lkt",
-        "description_en": "broken clouds"
+        "temperature_C": 8.62,
+        "humidity": 86,
+        "description_de": "Leichter Regen",
+        "description_en": "light rain"
     },
     {
         "city": "Halle (Saale)",
-        "temperature_C": 15.4,
-        "humidity": 58,
-        "description_de": "Ein paar Wolken",
-        "description_en": "few clouds"
+        "temperature_C": 10.96,
+        "humidity": 72,
+        "description_de": "Klarer Himmel",
+        "description_en": "clear sky"
     }
 ]

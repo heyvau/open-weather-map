@@ -14,7 +14,7 @@ class FileExporter:
 
     def export(self, data: list[dict], format: str, filename: str) -> function:
         """
-        Method gets data and format for exporting and
+        The method gets data and format for exporting and
         calls the executing function based on the passed format.
         """
         exporter = self._get_exporter(format)
@@ -23,7 +23,7 @@ class FileExporter:
     @log
     def _get_exporter(self, format: str) -> function:
         """
-        Method returns the executing function based on the passed format
+        The method returns the executing function based on the passed format
         or raises error, when format is not supported.
         """
         exporter = self._exporters.get(format)
@@ -34,7 +34,7 @@ class FileExporter:
 @log
 def export_to_json(data: list[dict], filename: str) -> None:
     """
-    Function writes data to the json file.
+    The function writes data to the json file.
     """
     with open(filename, mode="w", encoding="UTF-8") as f:
         json.dump(data, f, indent=4)
@@ -42,7 +42,7 @@ def export_to_json(data: list[dict], filename: str) -> None:
 @log
 def export_to_yaml(data: list[dict], filename: str) -> None:
     """
-    Function writes data to the yaml file.
+    The function writes data to the yaml file.
     """
     with open(filename, mode="w", encoding="UTF-8") as f:
         yaml.dump(data, f, default_flow_style=False)

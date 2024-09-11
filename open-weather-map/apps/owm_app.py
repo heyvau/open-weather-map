@@ -1,16 +1,16 @@
 from logger import log
 from utilities import get_response
-from app import AppABC, App
+from apps.app import AppABC, App
 
 
-class OwmApp(AppABC, App):
+class OwmApp(App, AppABC):
     """
     Application for Open Weather Map.
     """
     @log
     def _fetch_city_data(self, city: str) -> dict:
         """
-        Method gets name of the city and returns 
+        The method gets name of the city and returns 
         its current weather data as a dict. 
         """
         current_data = get_response(
@@ -36,7 +36,11 @@ class OwmApp(AppABC, App):
         return city_data
 
     @log
-    def get_data(self):
+    def get_data(self) -> list[dict]:
+        """
+        The method returns weather data
+        for all specified cities. 
+        """
         cities = []
         for city in self.config["cities"]:
             cities.append(self._fetch_city_data(city))
