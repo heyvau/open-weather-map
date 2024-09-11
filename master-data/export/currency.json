@@ -1,0 +1,14 @@
+[
+    {
+        "base": "EUR",
+        "currency_code": "USD",
+        "currency": 1.1,
+        "vs_currency": 0.91
+    },
+    {
+        "base": "EUR",
+        "currency_code": "UAH",
+        "currency": 45.45,
+        "vs_currency": 0.02
+    }
+]

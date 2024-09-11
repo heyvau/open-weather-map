@@ -1,0 +1,17 @@
+{
+    "url": "http://api.exchangeratesapi.io/v1/latest",
+    "api_key": "79e79735837c7eb811dec6a6159a26cb",
+    "currency": {"EUR": ["USD", "UAH"]},
+    "export_files": {
+        "json": "./export/currency.json",
+        "yaml": "./export/currency.yaml"
+    },
+    "db": {
+        "engine": "sqlite:///./export/currency.db",
+        "stmt": {
+            "drop_table": "DROP TABLE IF EXISTS Currency;",
+            "create_table": "CREATE TABLE Currency (id INTEGER PRIMARY KEY AUTOINCREMENT, base VARCHAR(5), currency_code VARCHAR(5), currency DECIMAL(10,2), vs_currency DECIMAL(10,2));",
+            "insert": "INSERT INTO Currency (base, currency_code, currency, vs_currency) VALUES (:base, :currency_code, :currency, :vs_currency)"
+        } 
+    }
+}
