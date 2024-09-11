@@ -1,28 +1,28 @@
 [
     {
         "city": "Berlin",
-        "temperature_C": 15.18,
-        "humidity": 84,
+        "temperature_C": 15.04,
+        "humidity": 85,
         "description_de": "Leichter Regen",
         "description_en": "light rain"
     },
     {
         "city": "Stuttgart",
-        "temperature_C": 14.41,
-        "humidity": 74,
+        "temperature_C": 14.58,
+        "humidity": 73,
         "description_de": "Ein paar Wolken",
         "description_en": "few clouds"
     },
     {
         "city": "Aachen",
-        "temperature_C": 10.37,
+        "temperature_C": 10.21,
         "humidity": 91,
         "description_de": "Bedeckt",
         "description_en": "overcast clouds"
     },
     {
         "city": "Halle (Saale)",
-        "temperature_C": 15.63,
+        "temperature_C": 15.67,
         "humidity": 62,
         "description_de": "\u00dcberwiegend bew\u00f6lkt",
         "description_en": "broken clouds"

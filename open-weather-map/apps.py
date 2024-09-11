@@ -3,6 +3,7 @@ import requests
 from exporter import DataExporter
 from abc import ABC, abstractmethod
 from logger import log
+from db import create_owm_db
 
 @log
 def get_response(url: str, **payload) -> dict:
@@ -82,4 +83,5 @@ class OwmApp(App):
         for format_ in self.config["export_files"]:
             self.exporter.export(data=self.cities, format=format_, filename=self.config["export_files"][format_])
         # export to DB
+        create_owm_db()
         self.exporter.export(data=self.cities, format="sql", table_name="CityWeather", db_name="owm.db")
