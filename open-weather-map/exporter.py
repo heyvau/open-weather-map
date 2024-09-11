@@ -2,6 +2,7 @@ from __future__ import annotations
 import json
 import yaml
 import sqlite3
+from logger import log
 
 
 class DataExporter:
@@ -27,6 +28,7 @@ class DataExporter:
         exporter = self._get_exporter(format)
         exporter(data, **kwargs)
 
+    @log
     def _get_exporter(self, format: str) -> function:
         """
         Method returns the executing function based on the passed format
@@ -37,7 +39,7 @@ class DataExporter:
             raise ValueError(format)
         return exporter
 
-
+@log
 def export_to_json(data: list[dict], filename: str) -> None:
     """
     Function writes data to the json file.
@@ -45,7 +47,7 @@ def export_to_json(data: list[dict], filename: str) -> None:
     with open(filename, mode="w", encoding="UTF-8") as f:
         json.dump(data, f, indent=4)
 
-
+@log
 def export_to_yaml(data: list[dict], filename: str) -> None:
     """
     Function writes data to the yaml file.
@@ -53,7 +55,7 @@ def export_to_yaml(data: list[dict], filename: str) -> None:
     with open(filename, mode="w", encoding="UTF-8") as f:
         yaml.dump(data, f, default_flow_style=False)
 
-
+@log
 def export_to_sql(data: list[dict], table_name: str, db_name: str) -> None:
     """
     Function inserts data rows into the db table.

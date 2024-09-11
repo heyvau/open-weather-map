@@ -2,8 +2,9 @@ import json
 import requests
 from exporter import DataExporter
 from abc import ABC, abstractmethod
+from logger import log
 
-
+@log
 def get_response(url: str, **payload) -> dict:
     """
     Function gets url with additional parameters and
@@ -18,6 +19,7 @@ class App(ABC):
         self.exporter = DataExporter()
         self.config = self.get_config(config_file)
 
+    @log
     def get_config(self, filename: str) -> dict:
         """
         Method reads config data from JSON file and returns it as a dict.
@@ -25,6 +27,7 @@ class App(ABC):
         with open (filename, "r", encoding="UTF-8") as f:
             config_data = json.load(f)
         return config_data
+
 
     @abstractmethod
     def run():
@@ -42,6 +45,7 @@ class OwmApp(App):
         super().__init__(config_file)
         self.cities = []
 
+    @log
     def get_city_data(self, city: str) -> dict:
         """
         Method gets name of the city and returns 
@@ -58,7 +62,7 @@ class OwmApp(App):
             "humidity": current_data["main"]["humidity"],
             f"description_{self.config['languages'][0]}": current_data["weather"][0]["description"]
         }
-        for lang in self.config.get("languages")[1:]:
+        for lang in self.config["languages"][1:]:
             current_data = get_response(
                 url=self.config["url"],
                 q=city, appid=self.config["api_key"],
@@ -69,6 +73,7 @@ class OwmApp(App):
             })
         return city_data
 
+    @log
     def run(self):
         for city in self.config["cities"]:
             self.cities.append(self.get_city_data(city))
